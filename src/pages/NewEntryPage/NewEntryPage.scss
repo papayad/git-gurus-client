@@ -6,4 +6,48 @@
   &__heading {
     font-weight: 400;
   }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-evenly;
+  }
+
+  &__rating-container {
+    width: 100%;
+  }
+
+  &__rate-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__rate-input {
+    width: 100%;
+    font-family: "Work Sans";
+  }
+
+  &__entry-container {
+    @extend .new-entry__rating-container;
+  }
+
+  &__entry-label {
+    @extend .new-entry__rate-label;
+  }
+
+  &__entry-input {
+    @extend .new-entry__rate-input;
+    justify-content: start;
+    height: 6rem;
+    resize: none;
+  }
+
+  &__post-btn {
+    font-family: "Work Sans";
+    width: 100%;
+    height: 2rem;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }

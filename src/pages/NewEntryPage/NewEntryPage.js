@@ -23,7 +23,7 @@ function NewEntryPage() {
             <label className="new-entry__entry-label" htmlFor="entry">
               Create New Entry
             </label>
-            <input
+            <textarea
               className="new-entry__entry-input"
               type="textarea"
               name="entry"
