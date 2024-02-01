@@ -19,6 +19,7 @@
   &__entry-rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__title {
@@ -32,7 +33,7 @@
   &__icon {
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    padding-left: 1rem;
   }
 
   &__delete-icon {
