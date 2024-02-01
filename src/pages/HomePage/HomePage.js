@@ -22,7 +22,7 @@ function HomePage() {
   }, []);
 
   console.log(notesData);
-
+  notesData.sort((a, b) => new Date(b.date) - new Date(a.date));
   return (
     <>
       <main className="main">
