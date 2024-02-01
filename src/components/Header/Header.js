@@ -9,11 +9,6 @@ function Header() {
           <Link className="header__title-link" to="/">
             <h1 className="header__title">Dear Diary</h1>
           </Link>
-          <button className="header__new-entry-btn">
-            <Link className="header__new-entry-link" to="/new-entry">
-              + Add Entry
-            </Link>
-          </button>
         </div>
       </header>
     </>
