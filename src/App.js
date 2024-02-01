@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/new-entry" element={<NewEntryPage />} />
+        <Route path="/addEntry" element={<NewEntryPage />} />
       </Routes>
     </BrowserRouter>
   );

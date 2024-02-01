@@ -1,20 +1,17 @@
 import "./EntryCard.scss";
 import deleteIcon from "../../assets/icons/delete.png";
 
-function EntryCard() {
+function EntryCard({ entryInfo }) {
   return (
     <>
       <article className="card">
         <div className="card__info-container">
           <div className="card__entry-rating">
-            <h3 className="card__title">Entry 1</h3>
+            <h3 className="card__title">Entry Title</h3>
             <p className="card__rating">Rating: 5/5</p>
           </div>
-          <p className="card__date">MM/DD/YYYY</p>
-          <p className="card__entry-text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet tempora
-            laboriosam ad nihil doloribus, impedit ipsum minima, odio omnis ratione!
-          </p>
+          <p className="card__date">{entryInfo.date}</p>
+          <p className="card__entry-text">{entryInfo.entry}</p>
         </div>
         <div className="card__icon">
           <img src={deleteIcon} alt="delete icon" className="card__delete-icon" />
