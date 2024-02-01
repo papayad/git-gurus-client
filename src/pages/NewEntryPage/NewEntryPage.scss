@@ -2,20 +2,28 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  width: 60%;
+  margin: auto;
 
   &__heading {
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
-    height: 30vh;
+    height: 50vh;
     justify-content: space-evenly;
   }
 
   &__rating-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    // height: 3rem;
+    gap: 0.3rem;
+    justify-content: space-between;
   }
 
   &__rate-label {
@@ -26,6 +34,11 @@
   &__rate-input {
     width: 100%;
     font-family: "Work Sans";
+    border: none;
+    border-bottom: 5px solid rgba(128, 128, 128, 0.332);
+    border-right: 5px solid rgba(128, 128, 128, 0.332);
+    height: 2rem;
+    font-size: 1rem;
   }
 
   &__entry-container {
@@ -47,7 +60,9 @@
     font-family: "Work Sans";
     width: 100%;
     height: 2rem;
-    margin: auto;
     margin-bottom: 1rem;
+    border-radius: 0;
+    background-color: black;
+    color: white;
   }
 }

@@ -7,6 +7,9 @@
 body {
   margin: 0;
   font-family: "Work Sans", Arial, Helvetica, sans-serif;
+  background-color: #e6e6e6;
+  // background-image: url(../../assets/0090b-512x512.jpg);
+  object-fit: cover;
 }
 
 h1,
@@ -14,4 +17,8 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+*:focus {
+  outline: none;
 }

@@ -1,13 +1,18 @@
 @use "../../styles/partials/globals" as *;
 @use "../../styles/partials/typography" as *;
+// @use "../../styles/partials/mixins" as *;
 
 .main {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  width: 60%;
+  margin: auto;
 
   &__heading {
-    font-weight: 400;
+    // font-family: ;
+    font-weight: 600;
+    font-size: 2rem;
   }
 
   &__new-entry-btn {
@@ -16,9 +21,23 @@
     height: 2rem;
     margin: auto;
     margin-bottom: 1rem;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+
+    :hover {
+      background-color: black;
+    }
   }
 
   &__new-entry-link {
     text-decoration: none;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
 }

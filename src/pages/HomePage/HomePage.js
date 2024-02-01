@@ -23,19 +23,42 @@ function HomePage() {
 
   console.log(notesData);
   notesData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const handleDeleteClick = async (id) => {
+    console.log(id);
+    try {
+      const response = await axios.delete(`http://localhost:8080/${id}`);
+      console.log(response.data);
+      getNotes();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <main className="main">
-        <button className="main__new-entry-btn">
-          <Link className="main__new-entry-link" to="/addEntry">
-            + Add Entry
-          </Link>
-        </button>
+        <Link className="main__new-entry-link" to="/addEntry">
+          <button className="main__new-entry-btn">+</button>
+        </Link>
         <h2 className="main__heading">Past Entries</h2>
-        {notesData.map((note) => {
-          return <EntryCard entryInfo={note} />;
-        })}
+        {!notesData.length ? (
+          <p>No Entries</p>
+        ) : (
+          notesData.map((note, index) => {
+            return (
+              <EntryCard
+                // key={index}
+                entryInfo={note}
+                handleDeleteClick={handleDeleteClick}
+              />
+            );
+          })
+        )}
       </main>
+      <footer>
+        <p>© Git Gurus</p>
+      </footer>
     </>
   );
 }
